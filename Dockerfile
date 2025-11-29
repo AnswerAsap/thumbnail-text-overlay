@@ -24,4 +24,6 @@ COPY app.py .
 EXPOSE 8080
 
 # Run the application
-CMD ["gunicorn", "app:app", "--bind", "0.0.0.0:8080", "--timeout", "120"]
+CMD gunicorn app:app --bind 0.0.0.0:${PORT:-8080} --timeout 120
+
+
