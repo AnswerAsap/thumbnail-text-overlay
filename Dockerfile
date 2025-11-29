@@ -20,5 +20,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy application code
 COPY app.py .
 
-# Run with Python directly (app.py handles PORT from environment)
+# Run with Python directly - app.py reads PORT from environment at runtime
 CMD ["python", "app.py"]
